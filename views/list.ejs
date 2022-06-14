@@ -5,21 +5,23 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>To Do List</title>
+        <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-
-        <h1>
-            It is a
-            <%= kindOfDay%>!</h1>
-        <ul>
-            <%addItem.forEach(element => { %>
-                <li><%= element%></li>
-                <% }) %>
-
-                    <form action="/" method="post">
-                        <input type="text" name="newItem">
-                        <button type="submit">
-                            add</button>
+        <div class="box" id="heading">
+            <h1><%=listTitle %></h1>
+        </div>
+        <div class="box">
+            <% addItem.forEach(element => { %>
+                <div class="item">
+                    <input type="checkbox">
+                    <p><%= element%></p>
+                </div>
+                <% }); %>
+                    <form class="item" action="/" method="post">
+                        <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+                        <button type="submit" name="work" value=<%= listTitle %>>+</button>
                     </form>
-                </body>
-            </html>
+                </div>
+            </body>
+        </html>
