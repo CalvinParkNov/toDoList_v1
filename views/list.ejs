@@ -11,7 +11,15 @@
         <h1>
             It is a
             <%= kindOfDay%>!</h1>
-        <p>Lets go back to work</p>
+        <ul>
+            <%addItem.forEach(element => { %>
+                <li><%= element%></li>
+                <% }) %>
 
-    </body>
-</html>
+                    <form action="/" method="post">
+                        <input type="text" name="newItem">
+                        <button type="submit">
+                            add</button>
+                    </form>
+                </body>
+            </html>
